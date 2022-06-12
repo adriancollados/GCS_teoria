@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card style="width: 400px; margin: 10px auto;">
+    <ion-form [formGroup]="login"  *ngIf="!cardShow" >
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="mail" item-start></ion-icon>
+          Usuario
+        </ion-label>
+        <ion-input color="secondary" type="text" formControlName="email"></ion-input>
+      </ion-item>
+      <p ion-text class="text08"
+        *ngIf="login.get('email').touched && login.get('email').hasError('validator')">
+      <ion-text color="warning">El email no es correcto</ion-text>
+      </p>
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="lock-closed" item-start></ion-icon>
+          Password
+        </ion-label>
+        <ion-input color="secondary" type="password" formControlName="clave"></ion-input>
+      </ion-item>
+      <p ion-text class="text08"
+        *ngIf="login.get('clave').touched && login.get('clave').hasError('validator')">
+      <ion-text color="warning">La contraseña debe tener longitud mayor a 6</ion-text>
+      </p>
+    
+      <div>
+        <ion-button icon-left size="medium" expand="full" shape="round" color="dark"
+          (click)="doLogin()" [disabled]="!login.valid" tappable>
+          <ion-icon name="log-in"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-form>
+  </ion-card>
+  
+  <ion-card *ngIf="cardShow" style="width: 400px; margin: 10px auto;">
+    <h2>Login enviado!</h2>
+    <ion-text color="primary">Email: {{login.value.email}}</ion-text><br>
+    <ion-text color="primary">Password: {{login.value.clave}}</ion-text>
+  </ion-card>
+</ion-content>
+
+

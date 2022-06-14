@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="container">
+      <ion-title>Calendario</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-calendar class="mt-4" style="background-color: dark;" [(ngModel)]="date"
+      (onChange)="onChange($event)"
+      [type]="type"
+      [format]="'YYYY-MM-DD'">
+  </ion-calendar>
+  </div>
+</ion-content>

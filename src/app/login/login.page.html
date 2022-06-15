@@ -32,17 +32,11 @@
     
       <div>
         <ion-button icon-left size="medium" expand="full" shape="round" color="dark"
-          (click)="doLogin()" [disabled]="!login.valid" tappable>
+          (click)="doLogin()" [disabled]="!login.valid" tappable [routerLink]="['/tabs/home']">
           <ion-icon name="log-in"></ion-icon>
         </ion-button>
       </div>
     </ion-form>
-  </ion-card>
-  
-  <ion-card *ngIf="cardShow" style="width: 400px; margin: 10px auto;">
-    <h2>Login enviado!</h2>
-    <ion-text color="primary">Email: {{login.value.email}}</ion-text><br>
-    <ion-text color="primary">Password: {{login.value.clave}}</ion-text>
   </ion-card>
 </ion-content>
 

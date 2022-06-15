@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="container">
+      <ion-item>
+        <ion-tab-button class="col-2" tab="home"><ion-icon name="chevron-back-outline"></ion-icon></ion-tab-button>
+        <ion-title>Calendario</ion-title>
+      </ion-item>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-img class="mt-4" src="./assets/images/Captura de pantalla 2022-06-14 185711.png" style="cursor: pointer;" (click)="mostrarDieta()"></ion-img>
+
+    <div class="card" *ngIf="showInfo">
+      <ion-icon name="close" (click)="showInfo = false"></ion-icon>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Desayuno</ion-label><br>
+        </ion-list-header>
+        <ion-item>
+          <p>- Tostada de pan integral con aceite y tomate.
+             - Cafe (al gusto)
+          </p>
+        </ion-item>
+        <ion-list-header>
+          <ion-label>Comida</ion-label><br>
+        </ion-list-header>
+        <ion-item>
+          <p>- Tallarines salteados con verdura</p>
+        </ion-item>
+        
+        <ion-list-header>
+          <ion-label>Merienda</ion-label><br>
+        </ion-list-header>
+        <ion-item>
+          <p>- Manzana o nueces</p>
+        </ion-item>
+        <ion-list-header>
+          <ion-label>Cena</ion-label><br>
+        </ion-list-header>
+        <ion-item>
+          <p>- Ensalada de tomate o tortilla francesa</p>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

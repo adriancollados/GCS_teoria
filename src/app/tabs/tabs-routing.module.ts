@@ -8,16 +8,32 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
+        path: 'home',
+        loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
+      },
+      {
         path: 'training',
         loadChildren: () => import('../training-page/training-page.module').then(m => m.TrainingPagePageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'dieta',
+        loadChildren: () => import('../calendar/calendar.module').then(m => m.CalendarPageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'chat',
+        loadChildren: () => import('../chat/chat.module').then(m => m.ChatPageModule)
+      },
+      {
+        path: 'chat-p',
+        loadChildren: () => import("../chat-p/chat-p-routing.module").then(m => m.ChatPPageRoutingModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('../profile/profile.module').then( m => m.ProfilePageModule)
+      },
+      {
+        path: 'progress',
+        loadChildren: () => import('../progress/progress.module').then( m => m.ProgressPageModule)
       },
       {
         path: '',

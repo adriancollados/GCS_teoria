@@ -20,6 +20,18 @@ const routes: Routes = [
         loadChildren: () => import('../chat/chat.module').then(m => m.ChatPageModule)
       },
       {
+        path: 'chat-p',
+        loadChildren: () => import("../chat-p/chat-p-routing.module").then(m => m.ChatPPageRoutingModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('../profile/profile.module').then( m => m.ProfilePageModule)
+      },
+      {
+        path: 'progress',
+        loadChildren: () => import('../progress/progress.module').then( m => m.ProgressPageModule)
+      },
+      {
         path: '',
         redirectTo: '/login',
         pathMatch: 'full'

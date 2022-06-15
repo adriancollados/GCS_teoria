@@ -5,12 +5,26 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './calendar.page.html',
   styleUrls: ['./calendar.page.scss'],
 })
-export class CalendarPage  {
+export class CalendarPage implements OnInit {
 
-  date: string;
-  type: 'string';
-  constructor() { }
-  onChange($event) {
-    console.log($event);
+
+  showInfo: Boolean = false;
+
+  constructor(){
+    
   }
+
+  ngOnInit(){
+
+  }
+  
+  mostrarDieta(){
+    this.showInfo = true;
+  }
+
+  goHome(){
+    console.log("pulsado");
+    return "/tabs/home";
+  }
+
 }

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ChatPageRoutingModule } from './chat-routing.module';
+import { ProgressPageRoutingModule } from './progress-routing.module';
 
-import { ChatPage } from './chat.page';
+import { ProgressPage } from './progress.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ChatPageRoutingModule
+    ProgressPageRoutingModule
   ],
-  declarations: [ChatPage]
+  declarations: [ProgressPage]
 })
-export class ChatPageModule {}
+export class ProgressPageModule {}

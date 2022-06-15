@@ -13,6 +13,6 @@ export class ChatPage implements OnInit {
   }
 
   generateURL(){
-    return "/chat-p/dr";
+    return "/chat-p";
   }
 }

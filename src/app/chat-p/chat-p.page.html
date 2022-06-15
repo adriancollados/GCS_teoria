@@ -1,48 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Devdactic Chat
-    </ion-title>
+    <ion-item>
+      <ion-tab-button class="col-2" tab="chat"><ion-icon name="chevron-back-outline"></ion-icon></ion-tab-button>
+      <ion-title>
+        
+        Chat
+      </ion-title>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
  
 <ion-content>
- 
-  <ion-grid>
-    <ion-text color="medium" text-center>
-      <p>You joined the chat as {{ currentUser }}</p>
-    </ion-text>
-    <ion-row *ngFor="let message of messages">
- 
-      <ion-col size="9" *ngIf="message.user !== currentUser" class="message other-message">
-        <b>{{ message.user }}</b><br>
-        <span>{{ message.msg }}</span>
-        <div class="time" text-right><br>{{ message.createdAt | date:'short' }}</div>
-      </ion-col>
- 
-      <ion-col offset="3" size="9" *ngIf="message.user === currentUser" class="message my-message">
-        <b>{{ message.user }}</b><br>
-        <span>{{ message.msg }}</span>
-        <div class="time" text-right><br>{{ message.createdAt | date:'short' }}</div>
-      </ion-col>
- 
-    </ion-row>
-  </ion-grid>
- 
+  <ion-item-group class="mt-4">
+    <ion-item>
+      <ion-label>Dr.Antonio</ion-label>
+    </ion-item>
+    <br>
+    <br><br>
+    <ion-img src="./assets/images/Captura de pantalla 2022-06-14 190015.png" style="height: 100%"></ion-img>
+  </ion-item-group>
+  
 </ion-content>
- 
-<ion-footer>
-  <ion-toolbar color="light">
-    <ion-row align-items-center>
-      <ion-col size="10">
-        <ion-textarea auto-grow class="message-input" rows="1" [(ngModel)]="message"></ion-textarea>
-      </ion-col>
-      <ion-col size="2">
-        <ion-button expand="block" fill="clear" color="primary" [disabled]="message === ''" class="msg-btn"
-          (click)="sendMessage()">
-          <ion-icon name="ios-send" slot="icon-only"></ion-icon>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-toolbar>
-</ion-footer>

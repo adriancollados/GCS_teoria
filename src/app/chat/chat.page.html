@@ -1,7 +1,10 @@
 <ion-header>
   <ion-toolbar>
     <div class="container">
-      <ion-title>Chat</ion-title>
+      <ion-item>
+        <ion-tab-button class="col-2" tab="home"><ion-icon name="chevron-back-outline"></ion-icon></ion-tab-button>
+        <ion-title>Chat</ion-title>
+      </ion-item>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -11,11 +14,11 @@
     <ion-list>
      <ion-item>
         <ion-label>Dr. Alfredo</ion-label>
-        <ion-tab-button [href]="generateURL()"><ion-icon name="chevron-forward-outline"></ion-icon></ion-tab-button>
+        <ion-tab-button tab="chat-p"><ion-icon name="chevron-forward-outline"></ion-icon></ion-tab-button>
       </ion-item>
       <ion-item>
         <ion-label>Dr. Manzano</ion-label>
-        <ion-tab-button [href]="generateURL()"><ion-icon name="chevron-forward-outline"></ion-icon></ion-tab-button>
+        <ion-tab-button tab="chat-p"><ion-icon name="chevron-forward-outline"></ion-icon></ion-tab-button>
       </ion-item>
     </ion-list>
   </div>

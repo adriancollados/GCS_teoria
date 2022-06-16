@@ -13,7 +13,7 @@ const routes: Routes = [
       },
       {
         path: 'training',
-        loadChildren: () => import('../training-page/training-page.module').then(m => m.TrainingPagePageModule)
+        loadChildren: () => import('../training-weeks/training-weeks.module').then(m => m.TrainingWeeksPageModule)
       },
       {
         path: 'dieta',
